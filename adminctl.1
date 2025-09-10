@@ -1,0 +1,39 @@
+.\" Manpage for adminctl
+.TH ADMINCTL 1 "2025-09-10" "v0.1" "AdminCTL Manual"
+.SH NAME
+adminctl \- Advanced System Administration CLI
+.SH SYNOPSIS
+.B adminctl
+.RI [module] " " [command] " " [options/arguments]
+.SH DESCRIPTION
+AdminCTL is a professional Linux CLI tool for system, service, network, and backup management. It is written in Bash with a modular structure.
+.SH MODULES
+.TP
+service
+Manage system services (check, autorestart, log)
+.TP
+network
+Monitor network interfaces, routes, ports, summary
+.TP
+monitor
+System monitoring: CPU, memory, disk, uptime, full report
+.TP
+backup
+Run, restore, delete backups with optional compression
+.SH EXAMPLES
+.TP
+./adminctl help
+Show general help
+.TP
+./adminctl service check nginx
+Check if nginx service is running
+.TP
+./adminctl backup run --source /etc,/home/user --dest /backups --compress
+Run backup with compression
+.SH OPTIONS
+Commands support options and arguments; see each module help
+.SH AUTHOR
+Shady Emad
+.SH LICENSE
+MIT License
+

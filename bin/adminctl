@@ -1,0 +1,9 @@
+#!/bin/bash
+# Entry point for adminctl
+
+# get project root
+BASEDIR=$(cd "$(dirname "$0")/.." && pwd)
+
+# Run main script with all provided arguments
+"$BASEDIR/src/main.sh" "$@"
+
